@@ -1,0 +1,25 @@
+<div class="home-car-container">
+  <div class="btn-container">
+    <button
+      class="btn btn-dark"
+      (click)="navigateNewCar()"
+      *ngIf="!isAddingNewCar"
+    >
+      Add New Car
+    </button>
+
+    <button class="btn btn-dark" (click)="onCancel()" *ngIf="isAddingNewCar">
+      See All Cars
+    </button>
+  </div>
+
+  <app-car-edit *ngIf="isAddingNewCar"></app-car-edit>
+
+  <div class="car-item-container" *ngIf="!isAddingNewCar">
+    <app-car-item
+      *ngFor="let car of cars; let i = index"
+      [index]="i"
+      [car]="car"
+    ></app-car-item>
+  </div>
+</div>

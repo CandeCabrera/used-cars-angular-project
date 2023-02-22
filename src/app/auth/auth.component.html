@@ -1,0 +1,64 @@
+<div class="auth-container">
+  <app-alert
+    [message]="error"
+    *ngIf="error"
+    (close)="onHandleError()"
+  ></app-alert>
+  <ng-template appPlaceholder></ng-template>
+  <div *ngIf="isLoading" style="text-align: center">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+
+  <div class="test-data-container">
+    <p *ngIf="isLoginMode">
+      If you want to create an admin account click
+      <a (click)="onSwitchMode()">here</a> or else you can access with this test
+      data
+    </p>
+
+    <p *ngIf="!isLoginMode">
+      If you want to login click <a (click)="onSwitchMode()">here.</a>
+    </p>
+
+    <div class="test-data" *ngIf="isLoginMode">
+      <h4>Test Data</h4>
+      <p><i class="fa-regular fa-envelope"></i> test@test.com</p>
+      <p><i class="fa-solid fa-lock"></i>000000</p>
+    </div>
+  </div>
+  <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        ngModel
+        name="email"
+        required
+        email
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        ngModel
+        name="password"
+        minlength="6"
+        required
+      />
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-light" type="submit" [disabled]="!authForm.valid">
+        {{ isLoginMode ? "Login" : "Sign Up" }}
+      </button>
+
+      <button class="btn btn-dark" (click)="onSwitchMode()" type="button">
+        Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+.clients-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(249px, 250px));
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.single-client {
+  background-color: blueviolet;
+}

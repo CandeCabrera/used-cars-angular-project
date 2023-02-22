@@ -1,0 +1,85 @@
+.auth-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.auth-container form {
+  max-width: 450px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.form-group {
+  background-color: #343a41;
+  border-radius: 5px;
+  width: 100%;
+}
+
+label {
+  color: white;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-weight: bolder;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.btn-container button {
+  margin: 0;
+}
+
+.test-data-container {
+  margin: 0 auto;
+  max-width: 450px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #343a41;
+}
+
+.test-data-container p a {
+  font-weight: bolder;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.test-data {
+  background-color: #343a41;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.test-data h4 {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.test-data p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 5px 15px;
+  border: 1px solid white;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+}

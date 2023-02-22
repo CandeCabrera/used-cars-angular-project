@@ -1,0 +1,72 @@
+.single-client {
+  background-color: #343a41;
+  position: relative;
+  color: white;
+  min-height: 317px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 30px;
+}
+
+.client-name {
+  background-color: rgba(52, 58, 65, 0.412);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 6px;
+  padding: 5px 8px 5px 14px;
+  font-size: 16px;
+}
+
+.img-container {
+  width: 249px;
+  height: 140px;
+  overflow: hidden;
+}
+
+h4 {
+  padding: 7px 0 7px 10px;
+}
+
+.client-comment {
+  text-align: justify;
+  padding: 15px;
+}
+
+.rate-container {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.rate-container i {
+  color: gold;
+}
+
+.rate-container p {
+  padding: 0;
+  margin: 0;
+}
+.btn-container {
+  height: 30px;
+}
+
+button {
+  border: none;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 3px;
+  color: #343a41;
+}
+
+button:hover {
+  background-color: #272b30;
+  color: white;
+  border: 1px solid white;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

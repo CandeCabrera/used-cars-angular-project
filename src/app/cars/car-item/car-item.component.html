@@ -1,0 +1,123 @@
+<div class="edit-delete-container" *ngIf="!modalToggle">
+  <i class="fa-regular fa-pen-to-square edit-car" (click)="onEdit()"></i>
+  <i class="fa-regular fa-trash-can delete-car" (click)="onDelete()"></i>
+</div>
+<div class="car-card">
+  <div class="left-car-card">
+    <h4>{{ car?.model }} | {{ car?.brand | uppercase }}</h4>
+    <img [src]="car?.imagePath" alt="" height="90px" />
+    <h6 class="car-category">{{ car?.category }}</h6>
+  </div>
+
+  <div class="right-car-card">
+    <p>{{ car?.year }} | $ {{ car?.price | number }}</p>
+    <p>Miles: {{ car?.miles | number }}</p>
+  </div>
+</div>
+
+<div class="form-container" *ngIf="modalToggle">
+  <h3>Edit Car</h3>
+
+  <i class="fa-solid fa-xmark quit" (click)="onCancel()"></i>
+
+  <form [formGroup]="carFormEdit" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input
+        type="text"
+        id="model"
+        formControlName="model"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="brand">Brand</label>
+      <input
+        type="text"
+        id="brand"
+        formControlName="brand"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        id="price"
+        formControlName="price"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input
+        type="number"
+        id="year"
+        formControlName="year"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="miles">Miles</label>
+      <input
+        type="number"
+        id="miles"
+        formControlName="miles"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="color">Color</label>
+      <input
+        type="text"
+        id="color"
+        formControlName="color"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input
+        type="text"
+        id="category"
+        formControlName="category"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="imagePath">Image URL</label>
+      <input
+        type="text"
+        id="imagePath"
+        formControlName="imagePath"
+        class="form-control"
+      />
+    </div>
+
+    <div class="btn-container">
+      <button
+        routerLink="/cars"
+        type="submit"
+        class="btn btn-light"
+        [disabled]="!carFormEdit.valid"
+      >
+        Save
+      </button>
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/cars"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

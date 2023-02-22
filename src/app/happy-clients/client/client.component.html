@@ -1,0 +1,23 @@
+<div class="single-client">
+  <div>
+    <h5 class="client-name">{{ client.name }}</h5>
+    <div class="img-container">
+      <img [src]="client.imagePath" width="250px" />
+    </div>
+    <h4>{{ client.title }}</h4>
+    <div class="rate-container">
+      <p>{{ client.rate }}</p>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <p class="client-comment" *ngIf="isShorten">
+      {{ client.comment | shorten : 50 }}
+    </p>
+    <p class="client-comment" *ngIf="!isShorten">{{ seeMore(index) }}</p>
+
+    <div class="btn-container">
+      <button *ngIf="isShorten" (click)="seeMore(index)">Read more</button>
+
+      <button *ngIf="!isShorten" (click)="hide()">Hide</button>
+    </div>
+  </div>
+</div>

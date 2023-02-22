@@ -1,0 +1,102 @@
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  background-image: url(https://www.bankrate.com/2018/11/29130006/How-to-buy-a-car-10-tips-and-tricks-to-get-the-best-deal.jpg?auto=webp&optimize=high&crop=16:9);
+  background-size: cover;
+  position: relative;
+}
+
+.hero h3 {
+  position: absolute;
+  color: white;
+  z-index: 30;
+  width: 50%;
+  background-color: rgba(52, 58, 65, 0.7);
+  backdrop-filter: blur(5px);
+  top: 60%;
+  right: 50%;
+  padding: 10px 20px 10px 0px;
+  text-align: right;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.hero-conection {
+  background-color: #343a41;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  max-width: 470px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  bottom: 30px;
+}
+
+@media (max-width: 610px) {
+  .hero h3 {
+    font-size: 19px;
+    width: 55%;
+    right: 60%;
+    top: 170px;
+    right: 0;
+    left: 0;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero h3 {
+    font-size: 14px;
+    width: 55%;
+    right: 60%;
+    top: 120px;
+    right: 0;
+    left: 0;
+    padding-left: 10px;
+  }
+
+  .hero-conection {
+    font-size: 20px;
+    max-width: 400px;
+  }
+}
+
+.row {
+  width: 85%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
+.vertical-line {
+  height: 50px;
+  width: 5px;
+  background-color: #343a41;
+}
+
+.title-container h2 {
+  padding-bottom: 3px;
+  margin: 0;
+  color: #343a41;
+}

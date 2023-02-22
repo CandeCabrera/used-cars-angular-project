@@ -1,0 +1,7 @@
+<div class="clients-container">
+  <app-client
+    *ngFor="let client of clients; let i = index"
+    [index]="i"
+    [client]="client"
+  ></app-client>
+</div>
